@@ -3,15 +3,17 @@ package com.tw.capability.shoppingcartapp.controller;
 import com.tw.capability.shoppingcartapp.Exceptions.ItemNotFoundException;
 import com.tw.capability.shoppingcartapp.model.ShoppingItem;
 import com.tw.capability.shoppingcartapp.service.ShoppingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-public class ShoppingWeb {
+public class ShoppingController {
+    @Autowired
     private final ShoppingService shoppingService;
 
-    public ShoppingWeb(ShoppingService shoppingService) {
+    public ShoppingController(ShoppingService shoppingService) {
         this.shoppingService = shoppingService;
     }
 

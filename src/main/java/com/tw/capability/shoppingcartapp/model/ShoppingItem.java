@@ -15,6 +15,9 @@ public class ShoppingItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private String id;
+    @Column(name="name")
     private String name;
+    @Column(name="description")
+    private String description;
 
 }
