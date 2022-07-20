@@ -18,16 +18,19 @@ public class ShoppingController {
     }
 
     @GetMapping("/items")
+    @CrossOrigin
     public List<ShoppingItem> getItems() {
         return shoppingService.findAllItems();
     }
 
     @GetMapping("/items/{id}")
+    @CrossOrigin
     public ShoppingItem getItem(@PathVariable Long id) throws ItemNotFoundException {
         return shoppingService.findItemById(id);
     }
 
     @PostMapping("/items")
+    @CrossOrigin
     public String createItem(@RequestBody ShoppingItem item){
         return shoppingService.createItem(item);
     }
